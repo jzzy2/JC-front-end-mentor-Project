@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;500;600;700;800;900&family=DotGothic16&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Lexend+Deca:wght@300;400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;500;600;700;800;900&family=DotGothic16&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Lexend+Deca:wght@100;200;300;400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* var meaning value bali gingamit yong root para mapabilis yong pag setup mo ng color 
+ or anything na nilagay mo sa root */
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-cyan-dark: hsl(179, 100%, 13%);
+  --color-grey-light: hsl(0, 0%, 95%);
+  --color-white: #fff;
+
+  --font-primary: "Lexend Deca";
+  --font-secondary: "Big Shoulders Display";
+}
+
+@media (prefers-reduce-motion: reduce) {
+  *,
+  *::before *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* meaning ng vh - viewport */
+/* kaya ako gumamit ng webkit para kahit saang website 
+sya buksan hindi mag babgo yong size nong mismong content
+pati yong text-size-adjust: none */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  --webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  background-color: var(--color-grey-light);
+  font: 400 15px /1.6 var(--font-primary);
+  margin: unset;
+}
+
+/* short cut for font: weight size / line-height font family ganyna gamitin si font kaya namn may 
+var dahil sa root ko nilagayan yan tas imbis na name nong font  nilalagay 
+pag nilagay mo sya sa root powede mo syang lagayan ng siraling name kaya secondary kasi secondary \
+yong name ng font
+
+short cut yong ginagamit ko  powede rin yong traditional approach 
+
+h2 {
+  font-family: Lexa deca
+  font- size: 40px
+  line-height: 1.1 
+  font-weight: 700 
+} 
+  ganyan din yong pero pinag kaiba shortcut sya
+
+  */
+/* content style */
+
+/* margin-blocks defines the top and the bottom spacing  */
+/* so gumamit tayo ng rem dahil is rem responsive sya is pixel namn hindi sya  responsive 
+kong gustmo i resize yong size nong font mo or yong font-size mo gumamit ka ng rem ang
+ magandang gamitin at kong si rem den magandang gamitin sa margin at padding. */
+
+h2 {
+  font: 700 40px/1.1 var(--font-secondary);
+  text-transform: capitalize;
+  margin-block: 2.1875rem 1.5625rem; /* margin top yong 2,1875 at bottom namn si 1.5625 */
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* card design */
+
+/* so my mga possible gawin para  malag yan 
+mo ng design and article ng hindi gumagamit ng declaration 
+
+for example yong ginagamitna property sa css na 
+
+nth-child(1) yong meaning tinatarget mo lagayna ng design yong first na article na content
+
+ganto sya i code
+
+article:nth-child(1)
+
+
+pero dahil may declare ako gagamitin ko nalang yong naka declare
+*/
+
+/* meron ding short cut ways sa pag assign ng color  
+
+ganto lang yon color: hsla <kaya hsla dahil gagamit tayo ng opacity sa mismong color
+pag hsl lang walang opacity na gagamitin  
+
+eto yong short cut ng color
+
+color: hsla(0, 0%, 100% <eto yong color, 0.75 <eto naman yong opacity color)
+*/
+p {
+  color: #ffff;
+  opacity: 0.75;
+  margin-block: 0 1.5625rem;
+}
+.content_1 {
+  background-color: var(--color-orange);
+}
+
+.content_2 {
+  background-color: var(--color-cyan);
+}
+
+.content_3 {
+  background-color: var(--color-cyan-dark);
+}
+
+main {
+  padding: 2rem;
+  /* eto yong space sa  mismong   sa labas */
+}
+/* yong padding na 0 2rem same lang yan ng padding inline
+ang pinag kaiba lang yong pag gamit ng code kaya gumamit ng padding 
+inline dahil ang gusto mo lang i target is yong right and left hindi 
+yong top and bottom 
+
+pero same lang sila ng padding 0 2rem; yong padding 0 yon yong top and bottom 
+tas yong may 2rem naman yon yong right left and pinag kaibia lang nila
+sa code ginawa mo lang specific pero wala namn silang pinag ka iba */
+
+/* reminder pag gumamit ka ng height hindi sya gumagana dahil and default ng 
+anchor element is DISPLAY INLINE  which is hindi mo sya malalagyan ng style
+hindi gagana si width or height 
+pero kong gagamit ka ng DISPALY INLINE-BLOCK or i lalagay mo sya mismo
+don sa anchor element or don sa part na gustmo  milalagyan mo ng design */
+
+a {
+  font: 400 15px/1.5625rem var(--font-primary);
+  border-radius: 1.5625rem;
+
+  background-color: var(--color-grey-light);
+  height: 3rem;
+
+  padding-inline: 2rem; /* same lang sila ni padding 0 2rem pinag kaiba lang yong sa 
+  pag gamit ng code para mas madaling mabasa */
+
+  display: inline-block; /* gumamit tayo ng inline block kasi default ng website is inline
+  so pag nag declare tayo ng height and width pag walang inline-block hindi gagana ito
+  pero pag nilagyan natin ng display inline-block yong content na nilalagyan natin ng design 
+  gagana si width tas si height */
+
+  line-height: calc(3rem - 2px);
+  /* gumamit tayo ng line height para i adjust yong mismong  learn more dahil
+hindi sya naka align don sa mismong content background */
+
+  /* as you can see gumamit tayo ng calc sa line height para ma calculate natin yong mismong position
+nong mismong learn more sa loob ng bottom pero feeling ko the best way to create a button is
+
+button a link nalang mejo complicated kasi tong na satutorial di ko alm kong maganda syang gawin!!!
+
+}
+
+article:nth-child(1) > a {
+  /* so gumamit tayo na tinatawag na nthchild alm mo nayan tas and dinag daglang 
+   is yong > indicate nya na meron kang tinatarget na code sa loob ng article
+   yong article mo yon yong container mo sa loob ng bawat content yong A naman ay
+   yon yong code  na tinatarget mo na lagyan ng design*/
+
+  color: var(--color-orange);
+  border: 2px solid var(--color-white);
+
+  transition: background-color 0.15s linear,
+    /* ibigsabhin yong transtion sa background yan */ color 0.15s linear;
+  /* yong isa naman para don sa text ata */
+}
+
+article:nth-child(2) > a {
+  color: var(--color-cyan);
+}
+
+article:nth-child(3) > a {
+  color: var(--color-cyan-dark);
+}
+
+a:hover,
+a:focus {
+  outline: none; /*   ni reremove mo  yong browser focus default style  gamit yong
+  outline: none; */
+  background: transparent;
+  color: var(--color-white) !important;
+}
+
+article {
+  --radius: 8px;
+
+  padding: 3.125rem; /* kaya tayo nag add ng padding sa mismong article na container  
+  para mag karoon ng space sa taas at baba aat sa right and left  */
+
+  max-width: 20.4375rem; /* gumamit namn tayo ng  max-width para limitanhan yong mismong sukat
+  nong container pag gumamit lang tayo ng width na may pixel pag na maliliit na syang 
+  device yong sakop nya hinid mag babago 
+
+  unlike sa sa max-width hindi mag aadjust yong mismong size nya kahit sa anong device */
+
+  border-radius: var(--border-radius, var(--radius));
+  /* gumamit sya na tinatawag na var which is indicate na gusto nya gawing custom property yong 
+border radius nya at nag decalare sya na ang default dpat ng border radius is 8 px 
+
+kaya nya ginawa to para hindi mag overrides  yong mismong border sa pinaka article 
+kasi pag hindi sya na ka var or na ka custom property hindi sya tinatangp ng web
+pero kong  nag declare ka ng custom property 
+
+at nag lagay ka ng  border  radius sa bawat child or content maiiwasan natin yong overries
+pr yong hindi sa pag basa ng mismo ng web don sa code */
+
+  position: relative;
+  /* so nag lagay tayo ng position relative para sa z-index kasi gusto natin sya i stack
+sa taas or ipag patong yong content sa isabng content  pero para pagana si z-index  need natin gumamit ng position relative
+sa container  remember mas mataas na number ng z-index mas maningibabaw yong content*/
+}
+article:nth-child(1) {
+  --border-radius: 8px 8px 0 0;
+  padding-bottom: calc(3.125rem + var(--radius));
+}
+article:nth-child(2) {
+  margin: calc(var(--radius) * -1) 0;
+  z-index: 2;
+}
+
+article:nth-child(3) {
+  --border-radius: 0 0 var(--radius) var(--radius);
+  padding: calc(3.125rem + var(--radius));
+}
+
+@media (min-width: 59.375rem) {
+  main {
+    display: flex;
+  }
+  p {
+    margin-block: 0 5rem; /* yong 0 is top*/
+  }
+}
+
+@media (min-width: 59.375rem) {
+  article {
+    min-width: 18.75rem;
+    max-width: 19.1875rem;
+    /* kaya may max width yan chaka min width once na umabot na yong 
+    content don sa 19.1875 rem hindi na sya liliit kaya hit na yong resolution nong phone sobrang
+    baba sa 19.1875rem */
+    font-size: 14px;
+  }
+
+  article:nth-child(1) {
+    --border-radius: var(--radius) 0 0 var(--radius);
+    padding-bottom: 3.125rem;
+    padding-right: calc(3.125rem + var(--radius));
+  }
+
+  article:nth-child(2) {
+    margin: 0 calc(var(--radius) * -1);
+  }
+
+  article:nth-child(3) {
+    --border-radius: 0 var(--radius) var(--radius) 0;
+    padding-top: 3.125rem;
+    padding-left: calc(3.125rem + var(--radius));
+  }
+
+  /* yong border radius natin naka custome sya ang gamit natin para ma custom sya is yong
+  --radius kaya may var  tas yong 00 namn  yan yong ibang part ng border: radius na wala na hindi natin
+  nilagyan ng value */
+}
+
+/*  gumamit tayo ng min-width  para sa responsive
+so kong mag reresponsive ka dapat min width ang gagamitin mo pag 
+yong rponsive umabot ng 800 px yong na sa loob 
+na sakop ni @media na 800px ay hhindi na gagana
+since nag declare lang tayo na pag umabot ng 800px OR 50rem
+pababa si responsive  hindi mag fufunction si @media 50rem or 800px dahil 
+lumag pas na sya don sa minimum required */
