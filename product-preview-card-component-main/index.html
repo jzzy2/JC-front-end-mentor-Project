@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+
+  <body>
+    <main>
+      <article class="product">
+        <!--- the best way to add image pag ibang image gagamitin 
+         sa mobile or sa desktop-->
+
+        <!--- una gagamit tayo ng source code na html 
+        dapat nasa loob sya ng image para sementic 
+      
+       ang maganda di to powede mo sya  iedit nalang sa mismong 
+      html or don sa mismong css 
+
+      pag sa html gagamit kalang ng 
+      mag dedeclare ka ng mismong media don sa mismong sources for example
+
+      sources media="(min-width: kong anong resolution mo sya illagay")
+      pero for example may px tayo media="(min-width: 600px)"
+
+      pag sa CSS namn HINDI KO PA ALM PERO 
+      MAS MAGANDA SA HTML KASI  DON MO LANG NALALAGAY YONG IMAGE 
+      CHAKA FEELING KO GANYAN TALGA SYA GAWIN 
+
+    -->
+        <!-- pero para mapagana yon 
+  gagaitin tayo na tinatawag na source: srcset 
+
+dito powede ka mag provide ng multiple  image defending im multiple stuff 
+like resolution 
+
+for example yong image para sa desktop may ibang resolution yon
+yong image namn don sa mobile dahil maliit yon maliit din yong resolution
+or iba din yong resolution na ilalagay mo-->
+        <picture class="product__img">
+          <source
+            srcset="
+              /product-preview-card-component-main/images/image-product-desktop.jpg
+            "
+            media="(min-width:600px)"
+          />
+
+          <img
+            src="/product-preview-card-component-main/images/image-product-mobile.jpg"
+            alt="Gabrielle Essence Eau De Parfum"
+          />
+        </picture>
+        <div class="product__content">
+          <p class="product__category">Perfume</p>
+
+          <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
+
+          <p>
+            A floral, solar and voluptuous interpresentation composed by Olivier
+            Polge, Perfume-creator for the house of CHANEL.
+          </p>
+          <div class="flex-group">
+            <h1 class="product__price">$149.99</h1>
+            <h2 class="product__orignal-price">$169.99</h2>
+          </div>
+
+          <button class="button" data-icon="shopping-cart">Add to Cart</button>
+          <!--- ang data-icon  eto yong cart icon or symbol icon-->
+        </div>
+      </article>
+    </main>
+  </body>
+
+  <footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jc Espina</a>.
+    </div>
+  </footer>
+</html>
