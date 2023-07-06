@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+:root {
+  --clr-background: hsl(0, 0%, 100%);
+  --clr-background-bodyr: hsl(212, 45%, 89%);
+
+  --clr-grayish-blue: hsl(220, 15%, 55%);
+  --clr-dark-color: hsl(218, 44%, 22%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --border-radius: 1rem;
+  --border-radius-image: 0.4375rem;
+}
+
+/* Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  /* yong code na to nag bibigay sya ng responsive result
+  kong wala to  tas  ginaw mong mobile yong mismong website mo 
+  yong buong image is ma cucut sya or dimo makikita yong ibbang part
+
+  pero pag meron ka neto 
+
+  ang ginagawa nya kahit na sobarang liit nong image
+  hindi mag kakaroon ng cut yong image nag aaddjust sya dipende 
+  don sa  size nong mismong content */
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  /* same lang din sya para ma iwasan din natin 
+ yong  overflow ng text  
+ 
+ kasi kong wala to pag nilakihan mo yong text 
+ ng mismong content mo tas ginawa mong mobile
+ mag kakaroon ka ng scroll na patagilid 
+ which is ang tawag don overflow kaya 
+ need ito para maiwasan yong overflow
+ */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+/*
+  8. Create a root stacking context
+*/
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background-color: var(--clr-background-bodyr);
+  font-size: 0.875rem;
+  font-family: "Outfit";
+}
+
+@media (min-width: 600px) {
+  .qr-code-scanner {
+    max-width: 275px;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+}
+.qr-code-scanner {
+  background-color: var(--clr-background);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+img {
+  border-radius: var(--border-radius-image);
+}
+
+.qr-code-scanner {
+  display: grid;
+  place-content: center;
+  line-height: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.qr-code-scanner {
+  max-width: 275px;
+}
+h2 {
+  color: var(--clr-dark-color);
+}
+
+p {
+  color: var(--clr-grayish-blue);
+  font-size: 0.875rem;
+}
